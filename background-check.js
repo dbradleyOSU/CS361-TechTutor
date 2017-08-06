@@ -39,20 +39,13 @@ transporter.sendMail(mailOptions, function(error, info){
 app.get('/',function(req,res){
   res.render('background-check');
 });
+;
 
-
-/*app.get('/get-loopback-improved',function(req,res){
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
-  }
-  var context = {};
-  context.dataList = qParams;
-  res.render('get-loopback-improved', context);
+app.get('/confirmation', function(req, res) {
+  res.render('confirmation');
 });
 
 
-app.get*/
  
 app.use(function(req,res){
   res.status(404);
